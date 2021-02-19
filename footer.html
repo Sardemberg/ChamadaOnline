@@ -1,0 +1,45 @@
+<div class="footer">
+    <ul>
+        <li>
+            Página Inicial
+        </li>
+        <li>
+            <button type="button" style="color: white;" class="btn btn-sucess" data-bs-toggle="modal" data-bs-target="#loginModal">
+                Tela de gerenciamento
+            </button>
+        </li>
+    </ul>
+    <h6>
+
+        E.E.E.P. Governador Virgílio Távora
+    </h6>
+</div>
+
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Insira sua senha de acesso</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form action="backEnd/autentica.php" id='formAutentica' style="text-align: center;" method="POST">
+                    <label for="">
+                        Senha: 
+                    </label>
+                    <input type="password" name="senha" placeholder="Senha" class="form-control">
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                <button type="button" onclick="autentica()" style="background-color: green; border-color: transparent;" class="btn btn-primary">Acessar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const autentica = () => {
+        document.querySelector('#formAutentica').submit();
+    }
+</script>
